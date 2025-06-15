@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import TechStack from '@/components/TechStack';
 
 export const metadata: Metadata = {
-  title: 'About - Your Name',
+  title: 'About - Morten Lundum-Nørgaard',
   description: 'Learn more about my background, experience, and passion for development.',
 };
 
@@ -46,9 +46,8 @@ export default function About() {
                 <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
                 </svg>
-              </div>
-              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white text-center mb-4">
-                Your Name
+              </div>              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white text-center mb-4">
+                Morten Lundum-Nørgaard
               </h2>
               <p className="text-gray-600 dark:text-gray-300 text-center">
                 Full-Stack Developer

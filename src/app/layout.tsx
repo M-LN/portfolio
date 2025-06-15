@@ -10,11 +10,11 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Your Name - Portfolio",
+  title: "Morten Lundum-Nørgaard - Portfolio",
   description: "Professional portfolio showcasing my projects, skills, and experience as a developer.",
   keywords: ["developer", "portfolio", "projects", "web development", "programming"],
-  authors: [{ name: "Your Name" }],
-  creator: "Your Name",
+  authors: [{ name: "Morten Lundum-Nørgaard" }],
+  creator: "Morten Lundum-Nørgaard",
 };
 
 export default function RootLayout({

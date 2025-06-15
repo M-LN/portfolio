@@ -109,9 +109,8 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
       title: 'Project Not Found',
     };
   }
-
   return {
-    title: `${project.title} - Your Name`,
+    title: `${project.title} - Morten Lundum-Nørgaard`,
     description: project.overview.substring(0, 160) + '...',
   };
 }

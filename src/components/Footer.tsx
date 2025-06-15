@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-lg font-semibold mb-4">Your Name</h3>
+            <h3 className="text-lg font-semibold mb-4">Morten Lundum-Nørgaard</h3>
             <p className="text-gray-400 max-w-md">
               Passionate developer creating innovative solutions and exceptional user experiences. 
               Let&apos;s build something amazing together.
@@ -84,7 +84,7 @@ export default function Footer() {
 
         <div className="mt-8 pt-8 border-t border-gray-800">
           <p className="text-center text-gray-400 text-sm">
-            © {currentYear} Your Name. All rights reserved. Built with Next.js and Tailwind CSS.
+            © {currentYear} Morten Lundum-Nørgaard. All rights reserved. Built with Next.js and Tailwind CSS.
           </p>
         </div>
       </div>

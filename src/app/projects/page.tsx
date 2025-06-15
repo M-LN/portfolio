@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import ProjectCard from '@/components/ProjectCard';
 
 export const metadata: Metadata = {
-  title: 'Projects - Your Name',
+  title: 'Projects - Morten Lundum-Nørgaard',
   description: 'Explore my portfolio of projects showcasing my skills in web development and software engineering.',
 };
 
