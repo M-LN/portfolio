@@ -3,95 +3,105 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import CaseStudy from '@/components/CaseStudy';
 
-// Sample project data - in a real app, this would come from a database or CMS
+// Real project data showcasing actual work experience
 const projectsData = {
-  'ecommerce-platform': {
-    title: 'E-Commerce Platform',
-    overview: 'A comprehensive e-commerce solution built from the ground up using modern web technologies. This platform features a complete shopping experience with user authentication, product catalog, shopping cart, secure payment processing, and an admin dashboard for inventory management.',
-    challenge: 'The main challenge was creating a scalable, secure e-commerce platform that could handle multiple concurrent users while maintaining fast performance and providing an intuitive user experience. Additionally, integrating with payment processors and ensuring PCI compliance added complexity to the project.',
-    solution: 'I implemented a modern tech stack using Next.js for server-side rendering and optimal performance, PostgreSQL for reliable data storage, and Stripe for secure payment processing. The architecture follows a modular approach with reusable components and API routes for seamless data management.',
-    technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe', 'Tailwind CSS', 'Prisma', 'NextAuth.js'],
+  'adx-test-report-generator': {
+    title: 'ADX Test Report Generator',
+    overview: 'A Flask-based web application that automates the generation of comprehensive HTML reports from test data stored in Azure Data Explorer (ADX). This tool streamlines the reporting process for industrial testing scenarios by providing customizable templates, automated data retrieval, and interactive visualizations.',
+    challenge: 'Manual report generation from ADX data was time-consuming and error-prone. Engineers needed a way to quickly generate standardized, professional reports with consistent formatting while maintaining flexibility for different test scenarios and data types.',
+    solution: 'Developed a Flask web application with a clean interface that connects to ADX via KQL queries, processes data using Python libraries, and generates HTML reports using Jinja2 templates. The system supports multiple report types, custom styling, and automated scheduling.',
+    technologies: ['Python', 'Flask', 'Azure Data Explorer', 'KQL', 'HTML/CSS', 'JavaScript', 'Jinja2', 'Pandas'],
     sections: [
       {
-        title: 'User Authentication & Authorization',
-        content: 'Implemented secure user authentication using NextAuth.js with support for multiple providers (email/password, Google, GitHub). The system includes role-based access control for customers and administrators, with protected routes and middleware for security.',
-        codeExample: `// middleware.ts
-export { default } from "next-auth/middleware"
-
-export const config = { 
-  matcher: ["/dashboard/:path*", "/admin/:path*"] 
-}`
+        title: 'ADX Integration & Data Retrieval',
+        content: 'Implemented secure connection to Azure Data Explorer using authenticated APIs and optimized KQL queries for efficient data retrieval. The system handles complex queries across multiple tables and time ranges while maintaining performance.',
+        codeExample: `# Example KQL query structure
+def get_test_data(test_id, start_time, end_time):
+    query = f"""
+    TestData
+    | where TestId == '{test_id}'
+    | where Timestamp between (datetime({start_time}) .. datetime({end_time}))
+    | summarize avg(Temperature), max(Pressure) by bin(Timestamp, 1m)
+    | order by Timestamp asc
+    """
+    return execute_adx_query(query)`
       },
       {
-        title: 'Product Management System',
-        content: 'Built a comprehensive product management system with CRUD operations, image uploads, inventory tracking, and category management. The admin dashboard allows for easy product catalog management with real-time updates.',
-      },
-      {
-        title: 'Payment Integration',
-        content: 'Integrated Stripe for secure payment processing with support for multiple payment methods, webhooks for order confirmation, and automatic invoice generation. The system handles both one-time payments and subscription billing.',
-      }
-    ],
-    results: [
-      'Successfully processed over $50,000 in transactions during beta testing',
-      'Achieved 99.9% uptime with optimized database queries and caching',
-      'Reduced page load times by 40% through Next.js optimization',
-      'Implemented comprehensive security measures with zero security incidents'
-    ],
-    liveUrl: 'https://ecommerce-demo.vercel.app',
-    githubUrl: 'https://github.com/yourusername/ecommerce-platform'
-  },
-  'task-management-app': {
-    title: 'Task Management App',
-    overview: 'A collaborative task management application designed for teams to organize, track, and complete projects efficiently. The app features real-time updates, team collaboration tools, and comprehensive project tracking capabilities.',
-    challenge: 'Creating a real-time collaborative environment where multiple users can simultaneously work on tasks without conflicts, while maintaining data consistency and providing a smooth user experience across different devices and network conditions.',
-    solution: 'Leveraged Socket.io for real-time communication, implemented optimistic UI updates for immediate feedback, and used MongoDB for flexible data modeling. The application features a responsive design that works seamlessly across desktop and mobile devices.',
-    technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'Express', 'JWT', 'Material-UI'],
-    sections: [
-      {
-        title: 'Real-time Collaboration',
-        content: 'Implemented Socket.io for instant updates when team members create, update, or complete tasks. Users can see who is currently online and working on specific tasks, with live cursors and activity indicators.',
-      },
-      {
-        title: 'Task Organization & Filtering',
-        content: 'Built an intuitive task organization system with drag-and-drop functionality, multiple view modes (board, list, calendar), and advanced filtering options by priority, assignee, due date, and custom tags.',
-      },
-      {
-        title: 'Team Management',
-        content: 'Developed comprehensive team management features including user roles, permission levels, team invitations, and activity tracking. Team leads can assign tasks, set deadlines, and monitor progress across projects.',
-      }
-    ],
-    results: [
-      'Improved team productivity by 35% in pilot testing',
-      'Successfully handles 100+ concurrent users with real-time updates',
-      'Achieved 4.8/5 user satisfaction rating in feedback surveys',
-      'Reduced project completion time by 25% through better organization'
-    ]
-  },
-  'analytics-dashboard': {
-    title: 'Data Analytics Dashboard',
-    overview: 'An interactive data visualization dashboard that processes and displays complex datasets in real-time. Built for business intelligence and data-driven decision making, featuring customizable charts, automated reporting, and data export capabilities.',
-    challenge: 'Processing large datasets efficiently while providing interactive visualizations that remain responsive and informative. The challenge included handling real-time data streams, creating intuitive visualizations, and ensuring the dashboard performs well with millions of data points.',
-    solution: 'Implemented a robust backend using Python and FastAPI for data processing, utilized D3.js for custom interactive visualizations, and employed efficient data aggregation techniques. The frontend uses React with optimized rendering for smooth interactions.',
-    technologies: ['React', 'D3.js', 'Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Docker'],
-    sections: [
-      {
-        title: 'Data Processing Pipeline',
-        content: 'Built an efficient ETL pipeline using Python and FastAPI to process incoming data streams, perform calculations, and store aggregated results. Implemented caching with Redis to improve query performance and reduce database load.',
+        title: 'Report Template Engine',
+        content: 'Built a flexible template system using Jinja2 that allows for dynamic report generation with customizable layouts, charts, and data tables. Templates support conditional rendering based on test types and data availability.',
       },
       {
         title: 'Interactive Visualizations',
-        content: 'Created custom interactive charts using D3.js including time series graphs, heat maps, scatter plots, and geographical visualizations. Each chart supports zooming, filtering, and drill-down capabilities for detailed analysis.',
-      },
-      {
-        title: 'Real-time Updates',
-        content: 'Implemented WebSocket connections for real-time data updates, allowing the dashboard to reflect changes instantly without requiring page refreshes. Data is efficiently streamed and processed to maintain smooth performance.',
+        content: 'Integrated JavaScript charting libraries to create interactive visualizations within the HTML reports, including time-series plots, statistical summaries, and comparative analysis charts that enhance data interpretation.',
       }
     ],
     results: [
-      'Processes over 1 million data points per hour in real-time',
-      'Reduced report generation time from hours to minutes',
-      'Improved decision-making speed by 60% through instant insights',
-      'Successfully deployed to production with 99.95% uptime'
+      'Reduced report generation time from 2-3 hours to 5-10 minutes',
+      'Improved report consistency and eliminated manual formatting errors',
+      'Generated over 500 automated reports for various test scenarios',
+      'Increased engineer productivity and reduced overtime for report preparation'
+    ]
+  },
+  'lstm-steady-state-detection': {
+    title: 'LSTM Steady State Detection',
+    overview: 'A machine learning solution using LSTM neural networks to predict when generator testing will reach steady state conditions based on early temperature data patterns. This predictive model helps optimize testing procedures by reducing total test duration while maintaining accuracy.',
+    challenge: 'Traditional generator testing requires waiting for full steady state conditions, which can take several hours. Engineers needed a way to predict steady state earlier in the testing process to improve efficiency without compromising test validity.',
+    solution: 'Developed an LSTM-based time series prediction model trained on historical temperature data from generator tests. The model analyzes early temperature patterns and predicts steady state timing with high accuracy, enabling shorter test cycles.',
+    technologies: ['Python', 'TensorFlow/Keras', 'LSTM', 'NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib', 'Time Series Analysis'],
+    sections: [
+      {
+        title: 'Data Preprocessing & Feature Engineering',
+        content: 'Implemented comprehensive data preprocessing pipeline including noise filtering, normalization, and sliding window creation for time series input. Features were engineered to capture temperature gradients, rate of change, and statistical properties.',
+        codeExample: `def create_sequences(data, seq_length):
+    X, y = [], []
+    for i in range(len(data) - seq_length):
+        seq = data[i:(i + seq_length)]
+        target = data[i + seq_length]
+        X.append(seq)
+        y.append(target)
+    return np.array(X), np.array(y)`
+      },
+      {
+        title: 'LSTM Model Architecture',
+        content: 'Designed and implemented a multi-layer LSTM network with dropout regularization and batch normalization. The model architecture was optimized through hyperparameter tuning to balance prediction accuracy with computational efficiency.',
+      },
+      {
+        title: 'Model Validation & Testing',
+        content: 'Established rigorous validation procedures using time-series cross-validation and walk-forward testing to ensure model robustness. Performance metrics include RMSE, MAE, and custom steady-state prediction accuracy measures.',
+      }
+    ],
+    results: [
+      'Achieved 85% accuracy in predicting steady state within 30 minutes',
+      'Reduced average test duration by 40-60% for applicable scenarios',
+      'Model currently in validation phase with promising results',
+      'Potential for significant cost savings in generator testing operations'
+    ]
+  },
+  'timeseries-analysis-gui': {
+    title: 'Timeseries Data Analysis GUI',
+    overview: 'A comprehensive desktop application built with Python Tkinter that provides engineers with advanced tools for analyzing timeseries data. The application features statistical analysis, visualization capabilities, data filtering, and export functionality tailored for engineering data analysis workflows.',
+    challenge: 'Engineers needed a user-friendly desktop tool for complex timeseries analysis without requiring programming knowledge. The tool had to handle large datasets, provide statistical insights, and offer flexible visualization options while maintaining good performance.',
+    solution: 'Developed a feature-rich GUI application using Tkinter with integrated pandas for data processing, matplotlib for plotting, and scipy for statistical analysis. The interface provides intuitive controls for data manipulation and analysis with real-time visualization updates.',
+    technologies: ['Python', 'Tkinter', 'Pandas', 'NumPy', 'Matplotlib', 'SciPy', 'Plotly', 'Statistical Analysis'],
+    sections: [
+      {
+        title: 'Data Import & Management',
+        content: 'Implemented flexible data import system supporting multiple file formats (CSV, Excel, JSON) with automatic data type detection and validation. Features include data preview, column mapping, and handling of missing values.',
+      },
+      {
+        title: 'Statistical Analysis Tools',
+        content: 'Built comprehensive statistical analysis capabilities including descriptive statistics, correlation analysis, trend detection, and anomaly identification. Results are presented in both tabular and graphical formats for easy interpretation.',
+      },
+      {
+        title: 'Interactive Visualization',
+        content: 'Created dynamic plotting capabilities with zoom, pan, and selection tools. Supports multiple chart types including line plots, scatter plots, histograms, and box plots with customizable styling and annotation features.',
+      }
+    ],
+    results: [
+      'Successfully handles datasets with millions of data points',
+      'Reduced analysis time by 70% compared to manual Excel-based workflows',
+      'Improved data insights quality through advanced statistical tools',
+      'Widely adopted by engineering team for daily data analysis tasks'
     ]
   }
 };
@@ -147,8 +157,6 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           technologies={project.technologies}
           sections={project.sections}
           results={project.results}
-          liveUrl={'liveUrl' in project ? project.liveUrl : undefined}
-          githubUrl={'githubUrl' in project ? project.githubUrl : undefined}
         />
 
         {/* Navigation to Next/Previous Projects */}

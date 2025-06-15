@@ -2,50 +2,50 @@ import Link from 'next/link';
 import ProjectCard from '@/components/ProjectCard';
 import TechStack from '@/components/TechStack';
 
-// Sample project data - replace with your actual projects
+// Featured projects showcasing real work experience
 const featuredProjects = [
   {
     id: '1',
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution built with Next.js and PostgreSQL, featuring user authentication, payment processing, and admin dashboard.',
-    technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe', 'Tailwind CSS'],
-    slug: 'ecommerce-platform',
+    title: 'ADX Test Report Generator',
+    description: 'A Flask web application that generates comprehensive HTML reports from test data stored in Azure Data Explorer (ADX). Features automated data retrieval, customizable report templates, and interactive visualizations for test analysis.',
+    technologies: ['Python', 'Flask', 'Azure Data Explorer', 'HTML/CSS', 'JavaScript', 'Jinja2'],
+    slug: 'adx-test-report-generator',
     featured: true,
   },
   {
     id: '2',
-    title: 'Task Management App',
-    description: 'A collaborative task management application with real-time updates, built using React, Node.js, and Socket.io.',
-    technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'Express'],
-    slug: 'task-management-app',
+    title: 'LSTM Steady State Detection',
+    description: 'Machine Learning model using LSTM neural networks to predict steady state conditions early from temperature data during generator testing. Reduces testing time and improves efficiency in industrial testing processes.',
+    technologies: ['Python', 'TensorFlow/Keras', 'LSTM', 'NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib'],
+    slug: 'lstm-steady-state-detection',
     featured: true,
   },
   {
     id: '3',
-    title: 'Data Analytics Dashboard',
-    description: 'An interactive dashboard for data visualization and analytics, built with React and D3.js, featuring real-time data processing.',
-    technologies: ['React', 'D3.js', 'Python', 'FastAPI', 'PostgreSQL'],
-    slug: 'analytics-dashboard',
+    title: 'Timeseries Data Analysis GUI',
+    description: 'Comprehensive desktop application built with Tkinter providing advanced tools for timeseries data analysis. Features statistical analysis, visualization tools, data filtering, and export capabilities for engineering data analysis.',
+    technologies: ['Python', 'Tkinter', 'Pandas', 'NumPy', 'Matplotlib', 'SciPy', 'Plotly'],
+    slug: 'timeseries-analysis-gui',
     featured: true,
   },
 ];
 
 const techStackData = [
   {
-    category: 'Frontend',
-    items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML', 'CSS']
+    category: 'Data Science & ML',
+    items: ['Python', 'TensorFlow/Keras', 'LSTM', 'NumPy', 'Pandas', 'Scikit-learn']
   },
   {
-    category: 'Backend',
-    items: ['Node.js', 'Python', 'Express', 'FastAPI', 'REST API', 'GraphQL']
+    category: 'Web Development',
+    items: ['Flask', 'HTML/CSS', 'JavaScript', 'Jinja2', 'Next.js', 'React']
   },
   {
-    category: 'Database',
-    items: ['PostgreSQL', 'MongoDB', 'Redis', 'Supabase']
+    category: 'Data Visualization',
+    items: ['Matplotlib', 'Plotly', 'SciPy', 'D3.js', 'Interactive Charts']
   },
   {
-    category: 'Tools & Cloud',
-    items: ['Git', 'Docker', 'AWS', 'Vercel', 'Firebase']
+    category: 'Cloud & Tools',
+    items: ['Azure Data Explorer', 'Git', 'Tkinter', 'Desktop Apps', 'RESTful APIs']
   }
 ];
 
@@ -61,8 +61,8 @@ export default function Home() {
               <span className="text-blue-600 dark:text-blue-400">Morten Lundum-Nørgaard</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              A passionate full-stack developer who loves creating innovative solutions 
-              and exceptional user experiences.
+              Data Scientist and Software Developer specializing in machine learning, 
+              test automation, and data analysis solutions for industrial applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -93,7 +93,8 @@ export default function Home() {
               Featured Projects
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Here are some of my recent projects that showcase my skills and passion for development.
+              Explore my portfolio of data science and engineering projects, from machine learning models 
+              to automated reporting systems and comprehensive data analysis tools.
             </p>
           </div>
           

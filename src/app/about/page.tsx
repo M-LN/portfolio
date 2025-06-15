@@ -8,20 +8,20 @@ export const metadata: Metadata = {
 
 const techStackData = [
   {
-    category: 'Frontend',
-    items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML', 'CSS']
+    category: 'Data Science & ML',
+    items: ['Python', 'TensorFlow/Keras', 'LSTM', 'NumPy', 'Pandas', 'Scikit-learn']
   },
   {
-    category: 'Backend',
-    items: ['Node.js', 'Python', 'Express', 'FastAPI', 'REST API', 'GraphQL']
+    category: 'Web Development',
+    items: ['Flask', 'HTML/CSS', 'JavaScript', 'Jinja2', 'Next.js', 'React']
   },
   {
-    category: 'Database',
-    items: ['PostgreSQL', 'MongoDB', 'Redis', 'Supabase']
+    category: 'Data Visualization',
+    items: ['Matplotlib', 'Plotly', 'SciPy', 'D3.js', 'Interactive Charts']
   },
   {
-    category: 'Tools & Cloud',
-    items: ['Git', 'Docker', 'AWS', 'Vercel', 'Firebase']
+    category: 'Cloud & Tools',
+    items: ['Azure Data Explorer', 'Git', 'Tkinter', 'Desktop Apps', 'RESTful APIs']
   }
 ];
 
@@ -34,7 +34,8 @@ export default function About() {
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             About Me
           </h1>          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            I&apos;m a passionate developer with a love for creating elegant solutions to complex problems.
+            Data Scientist and Software Developer specializing in machine learning, 
+            test automation, and data analysis solutions for industrial applications.
           </p>
         </div>
 
@@ -48,38 +49,34 @@ export default function About() {
                 </svg>
               </div>              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white text-center mb-4">
                 Morten Lundum-Nørgaard
-              </h2>
-              <p className="text-gray-600 dark:text-gray-300 text-center">
-                Full-Stack Developer
+              </h2>              <p className="text-gray-600 dark:text-gray-300 text-center">
+                Data Scientist & Software Developer
               </p>
-            </div>
-
-            <div className="space-y-6">
+            </div>            <div className="space-y-6">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  📍 Location
+                  � Specialization
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Your City, Country
+                  Machine Learning, Data Analysis, Test Automation
                 </p>
               </div>
 
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  🎓 Education
+                  🛠️ Core Technologies
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Your Degree in Computer Science<br />
-                  Your University (Year)
+                  Python, Flask, TensorFlow, Azure Data Explorer
                 </p>
               </div>
 
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  💼 Experience
+                  🎯 Focus Areas
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  3+ years in full-stack development
+                  Industrial Testing, Predictive Analytics, Data Visualization
                 </p>
               </div>
             </div>
@@ -90,30 +87,30 @@ export default function About() {
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
               My Story
             </h2>
-            
-            <div className="prose prose-lg dark:prose-invert max-w-none">
+              <div className="prose prose-lg dark:prose-invert max-w-none">
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                My journey into software development began during my college years when I discovered 
-                the power of code to solve real-world problems. What started as curiosity quickly 
-                evolved into a passion for creating digital solutions that make a difference.
-              </p>              <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Over the past few years, I&apos;ve had the opportunity to work on diverse projects, 
-                from e-commerce platforms to data analytics dashboards. Each project has taught 
-                me something new and reinforced my belief that the best solutions come from 
-                understanding both the technical requirements and the human needs behind them.
+                My journey into data science began with a fascination for extracting meaningful insights 
+                from complex datasets. What started as exploring statistical patterns evolved into 
+                developing sophisticated machine learning solutions for industrial applications.
               </p>
 
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                I specialize in full-stack development with a focus on modern JavaScript 
-                frameworks, but I&apos;m always eager to learn new technologies and adapt to 
-                changing requirements. I believe in writing clean, maintainable code and 
-                creating user experiences that are both functional and delightful.
+                I specialize in creating automated systems that transform raw data into actionable insights. 
+                My work includes developing Flask applications for automated report generation from Azure Data Explorer, 
+                building LSTM models for predictive analytics in generator testing, and creating comprehensive 
+                GUI applications for timeseries data analysis.
+              </p>
+
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                My approach combines strong technical skills in Python, machine learning, and data visualization 
+                with a deep understanding of industrial testing processes. I focus on creating solutions that 
+                not only solve technical challenges but also improve efficiency and decision-making for engineering teams.
               </p>
 
               <p className="text-gray-600 dark:text-gray-300">
-                When I&apos;m not coding, you can find me exploring new technologies, contributing 
-                to open-source projects, or enjoying outdoor activities. I&apos;m always open to 
-                new challenges and opportunities to grow as a developer.
+                Currently, I&apos;m working on advancing predictive analytics in industrial testing, 
+                with a particular focus on LSTM neural networks for steady-state detection. I&apos;m always 
+                excited about new challenges that combine data science with practical engineering applications.
               </p>
             </div>
           </div>

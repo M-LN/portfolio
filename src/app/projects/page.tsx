@@ -6,55 +6,31 @@ export const metadata: Metadata = {
   description: 'Explore my portfolio of projects showcasing my skills in web development and software engineering.',
 };
 
-// Sample project data - replace with your actual projects
+// Real project data showcasing actual work experience
 const allProjects = [
   {
     id: '1',
-    title: 'E-Commerce Platform',
-    description: 'A full-stack e-commerce solution built with Next.js and PostgreSQL, featuring user authentication, payment processing, and admin dashboard.',
-    technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'Stripe', 'Tailwind CSS'],
-    slug: 'ecommerce-platform',
+    title: 'ADX Test Report Generator',
+    description: 'A Flask web application that generates comprehensive HTML reports from test data stored in Azure Data Explorer (ADX). Features automated data retrieval, customizable report templates, and interactive visualizations for test analysis.',
+    technologies: ['Python', 'Flask', 'Azure Data Explorer', 'HTML/CSS', 'JavaScript', 'Jinja2'],
+    slug: 'adx-test-report-generator',
     featured: true,
   },
   {
     id: '2',
-    title: 'Task Management App',
-    description: 'A collaborative task management application with real-time updates, built using React, Node.js, and Socket.io.',
-    technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'Express'],
-    slug: 'task-management-app',
+    title: 'LSTM Steady State Detection',
+    description: 'Machine Learning model using LSTM neural networks to predict steady state conditions early from temperature data during generator testing. Reduces testing time and improves efficiency in industrial testing processes.',
+    technologies: ['Python', 'TensorFlow/Keras', 'LSTM', 'NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib'],
+    slug: 'lstm-steady-state-detection',
     featured: true,
   },
   {
     id: '3',
-    title: 'Data Analytics Dashboard',
-    description: 'An interactive dashboard for data visualization and analytics, built with React and D3.js, featuring real-time data processing.',
-    technologies: ['React', 'D3.js', 'Python', 'FastAPI', 'PostgreSQL'],
-    slug: 'analytics-dashboard',
+    title: 'Timeseries Data Analysis GUI',
+    description: 'Comprehensive desktop application built with Tkinter providing advanced tools for timeseries data analysis. Features statistical analysis, visualization tools, data filtering, and export capabilities for engineering data analysis.',
+    technologies: ['Python', 'Tkinter', 'Pandas', 'NumPy', 'Matplotlib', 'SciPy', 'Plotly'],
+    slug: 'timeseries-analysis-gui',
     featured: true,
-  },
-  {
-    id: '4',
-    title: 'Weather App',
-    description: 'A responsive weather application with location-based forecasts, built with React and integrated with weather APIs.',
-    technologies: ['React', 'JavaScript', 'REST API', 'CSS', 'Responsive Design'],
-    slug: 'weather-app',
-    featured: false,
-  },
-  {
-    id: '5',
-    title: 'Blog Platform',
-    description: 'A full-featured blog platform with markdown support, user authentication, and content management capabilities.',
-    technologies: ['Next.js', 'TypeScript', 'Prisma', 'SQLite', 'Markdown'],
-    slug: 'blog-platform',
-    featured: false,
-  },
-  {
-    id: '6',
-    title: 'Chat Application',
-    description: 'A real-time chat application with private messaging, group chats, and file sharing capabilities.',
-    technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB', 'JWT'],
-    slug: 'chat-application',
-    featured: false,
   },
 ];
 
