@@ -1,36 +1,156 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Portfolio Website
 
-## Getting Started
+A modern, professional portfolio website built with Next.js 15, TypeScript, and Tailwind CSS. This portfolio showcases projects, skills, and professional experience with a focus on performance, accessibility, and responsive design.
 
-First, run the development server:
+## 🚀 Features
 
+- **Modern Tech Stack**: Built with Next.js 15, TypeScript, and Tailwind CSS
+- **Responsive Design**: Fully responsive across all devices
+- **Performance Optimized**: Server-side rendering and optimized images
+- **SEO Friendly**: Proper meta tags and structured data
+- **Dark Mode Support**: Automatic dark/light mode switching
+- **Type Safe**: Full TypeScript implementation
+- **Accessibility**: WCAG compliant design patterns
+
+## 📁 Project Structure
+
+```
+portfolio/
+├── src/
+│   ├── app/
+│   │   ├── about/
+│   │   │   └── page.tsx          # About page
+│   │   ├── contact/
+│   │   │   └── page.tsx          # Contact page
+│   │   ├── projects/
+│   │   │   ├── page.tsx          # Projects overview
+│   │   │   └── [slug]/
+│   │   │       └── page.tsx      # Individual project pages
+│   │   ├── layout.tsx            # Root layout
+│   │   └── page.tsx              # Home page
+│   └── components/
+│       ├── ProjectCard.tsx       # Project card component
+│       ├── CaseStudy.tsx         # Case study component
+│       ├── TechStack.tsx         # Technology stack component
+│       ├── Navigation.tsx        # Navigation component
+│       └── Footer.tsx            # Footer component
+├── public/                       # Static assets
+├── .github/                      # GitHub configuration
+└── ...config files
+```
+
+## 🛠️ Technologies Used
+
+### Frontend
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe JavaScript
+- **Tailwind CSS** - Utility-first CSS framework
+- **React** - Component-based UI library
+
+### Development Tools
+- **ESLint** - Code linting
+- **PostCSS** - CSS processing
+- **Git** - Version control
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18.17 or later
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <your-repo-url>
+cd portfolio
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 Customization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Personal Information
+1. Update personal details in:
+   - `src/app/layout.tsx` - Site metadata
+   - `src/app/page.tsx` - Hero section and featured projects
+   - `src/app/about/page.tsx` - About information
+   - `src/app/contact/page.tsx` - Contact information
 
-## Learn More
+### Projects
+1. Update project data in:
+   - `src/app/page.tsx` - Featured projects on home page
+   - `src/app/projects/page.tsx` - All projects listing
+   - `src/app/projects/[slug]/page.tsx` - Individual project details
 
-To learn more about Next.js, take a look at the following resources:
+### Styling
+1. Customize colors and styling in:
+   - `src/app/globals.css` - Global styles
+   - Tailwind classes throughout components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Components
+- All reusable components are in `src/components/`
+- Easy to customize and extend
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚢 Deployment
 
-## Deploy on Vercel
+### Vercel (Recommended)
+1. Push your code to GitHub
+2. Connect your repository to Vercel
+3. Deploy with automatic optimizations
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Other Platforms
+The app can be deployed to any platform that supports Next.js:
+- Netlify
+- Railway
+- AWS
+- Google Cloud
+- Azure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📊 Performance
+
+- **Core Web Vitals**: Optimized for excellent scores
+- **SEO**: Built-in SEO optimization
+- **Accessibility**: WCAG 2.1 AA compliant
+- **Performance**: Fast loading with code splitting
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📧 Contact
+
+For questions or support, please reach out through the contact form on the website or via:
+- Email: your.email@example.com
+- LinkedIn: [Your LinkedIn Profile]
+- GitHub: [Your GitHub Profile]
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+Built with ❤️ using Next.js and Tailwind CSS
