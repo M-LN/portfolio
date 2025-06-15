@@ -7,6 +7,7 @@ import CaseStudy from '@/components/CaseStudy';
 const projectsData = {
   'adx-test-report-generator': {
     title: 'ADX Test Report Generator',
+    image: '/images/projects/flask-report-generator.svg',
     overview: 'A Flask-based web application that automates the generation of comprehensive HTML reports from test data stored in Azure Data Explorer (ADX). This tool streamlines the reporting process for industrial testing scenarios by providing customizable templates, automated data retrieval, and interactive visualizations.',
     challenge: 'Manual report generation from ADX data was time-consuming and error-prone. Engineers needed a way to quickly generate standardized, professional reports with consistent formatting while maintaining flexibility for different test scenarios and data types.',
     solution: 'Developed a Flask web application with a clean interface that connects to ADX via KQL queries, processes data using Python libraries, and generates HTML reports using Jinja2 templates. The system supports multiple report types, custom styling, and automated scheduling.',
@@ -41,9 +42,9 @@ def get_test_data(test_id, start_time, end_time):
       'Generated over 500 automated reports for various test scenarios',
       'Increased engineer productivity and reduced overtime for report preparation'
     ]
-  },
-  'lstm-steady-state-detection': {
+  },  'lstm-steady-state-detection': {
     title: 'LSTM Steady State Detection',
+    image: '/images/projects/lstm-model.svg',
     overview: 'A machine learning solution using LSTM neural networks to predict when generator testing will reach steady state conditions based on early temperature data patterns. This predictive model helps optimize testing procedures by reducing total test duration while maintaining accuracy.',
     challenge: 'Traditional generator testing requires waiting for full steady state conditions, which can take several hours. Engineers needed a way to predict steady state earlier in the testing process to improve efficiency without compromising test validity.',
     solution: 'Developed an LSTM-based time series prediction model trained on historical temperature data from generator tests. The model analyzes early temperature patterns and predicts steady state timing with high accuracy, enabling shorter test cycles.',
@@ -76,9 +77,9 @@ def get_test_data(test_id, start_time, end_time):
       'Model currently in validation phase with promising results',
       'Potential for significant cost savings in generator testing operations'
     ]
-  },
-  'timeseries-analysis-gui': {
+  },  'timeseries-analysis-gui': {
     title: 'Timeseries Data Analysis GUI',
+    image: '/images/projects/timeseries-gui.svg',
     overview: 'A comprehensive desktop application built with Python Tkinter that provides engineers with advanced tools for analyzing timeseries data. The application features statistical analysis, visualization capabilities, data filtering, and export functionality tailored for engineering data analysis workflows.',
     challenge: 'Engineers needed a user-friendly desktop tool for complex timeseries analysis without requiring programming knowledge. The tool had to handle large datasets, provide statistical insights, and offer flexible visualization options while maintaining good performance.',
     solution: 'Developed a feature-rich GUI application using Tkinter with integrated pandas for data processing, matplotlib for plotting, and scipy for statistical analysis. The interface provides intuitive controls for data manipulation and analysis with real-time visualization updates.',

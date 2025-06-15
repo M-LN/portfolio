@@ -9,6 +9,7 @@ interface CaseStudySection {
 
 interface CaseStudyProps {
   title: string;
+  image?: string;
   overview: string;
   challenge: string;
   solution: string;
@@ -21,6 +22,7 @@ interface CaseStudyProps {
 
 export default function CaseStudy({
   title,
+  image,
   overview,
   challenge,
   solution,
@@ -37,6 +39,19 @@ export default function CaseStudy({
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
           {title}
         </h1>
+        
+        {/* Project Image */}
+        {image && (
+          <div className="relative h-64 w-full mb-8 rounded-lg overflow-hidden">
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+            />
+          </div>
+        )}
         
         <div className="flex flex-wrap gap-2 mb-6">
           {technologies.map((tech, index) => (
