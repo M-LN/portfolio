@@ -39,8 +39,7 @@ export default function CaseStudy({
         <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
           {title}
         </h1>
-        
-        {/* Project Image */}
+          {/* Project Image */}
         {image && (
           <div className="relative h-64 w-full mb-8 rounded-lg overflow-hidden">
             <Image
@@ -49,6 +48,7 @@ export default function CaseStudy({
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+              unoptimized={image.endsWith('.svg')}
             />
           </div>
         )}
@@ -133,8 +133,7 @@ export default function CaseStudy({
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
             {section.title}
           </h2>
-          
-          {section.image && (
+            {section.image && (
             <div className="relative h-64 md:h-96 mb-6 rounded-lg overflow-hidden">
               <Image
                 src={section.image}
@@ -142,6 +141,7 @@ export default function CaseStudy({
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+                unoptimized={section.image.endsWith('.svg')}
               />
             </div>
           )}

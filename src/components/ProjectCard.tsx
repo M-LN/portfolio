@@ -17,8 +17,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      {project.image ? (
+    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">      {project.image ? (
         <div className="relative h-48 w-full">
           <Image
             src={project.image}
@@ -26,6 +25,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             fill
             className="object-cover"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={project.featured}
+            unoptimized={project.image.endsWith('.svg')}
           />
         </div>
       ) : (

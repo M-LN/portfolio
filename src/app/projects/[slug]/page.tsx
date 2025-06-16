@@ -42,67 +42,6 @@ def get_test_data(test_id, start_time, end_time):
       'Generated over 500 automated reports for various test scenarios',
       'Increased engineer productivity and reduced overtime for report preparation'
     ]
-  },  'lstm-steady-state-detection': {
-    title: 'LSTM Steady State Detection',
-    image: '/images/projects/lstm-model.svg',
-    overview: 'A machine learning solution using LSTM neural networks to predict when generator testing will reach steady state conditions based on early temperature data patterns. This predictive model helps optimize testing procedures by reducing total test duration while maintaining accuracy.',
-    challenge: 'Traditional generator testing requires waiting for full steady state conditions, which can take several hours. Engineers needed a way to predict steady state earlier in the testing process to improve efficiency without compromising test validity.',
-    solution: 'Developed an LSTM-based time series prediction model trained on historical temperature data from generator tests. The model analyzes early temperature patterns and predicts steady state timing with high accuracy, enabling shorter test cycles.',
-    technologies: ['Python', 'TensorFlow/Keras', 'LSTM', 'NumPy', 'Pandas', 'Scikit-learn', 'Matplotlib', 'Time Series Analysis'],
-    sections: [
-      {
-        title: 'Data Preprocessing & Feature Engineering',
-        content: 'Implemented comprehensive data preprocessing pipeline including noise filtering, normalization, and sliding window creation for time series input. Features were engineered to capture temperature gradients, rate of change, and statistical properties.',
-        codeExample: `def create_sequences(data, seq_length):
-    X, y = [], []
-    for i in range(len(data) - seq_length):
-        seq = data[i:(i + seq_length)]
-        target = data[i + seq_length]
-        X.append(seq)
-        y.append(target)
-    return np.array(X), np.array(y)`
-      },
-      {
-        title: 'LSTM Model Architecture',
-        content: 'Designed and implemented a multi-layer LSTM network with dropout regularization and batch normalization. The model architecture was optimized through hyperparameter tuning to balance prediction accuracy with computational efficiency.',
-      },
-      {
-        title: 'Model Validation & Testing',
-        content: 'Established rigorous validation procedures using time-series cross-validation and walk-forward testing to ensure model robustness. Performance metrics include RMSE, MAE, and custom steady-state prediction accuracy measures.',
-      }
-    ],
-    results: [
-      'Achieved 85% accuracy in predicting steady state within 30 minutes',
-      'Reduced average test duration by 40-60% for applicable scenarios',
-      'Model currently in validation phase with promising results',
-      'Potential for significant cost savings in generator testing operations'
-    ]
-  },  'timeseries-analysis-gui': {
-    title: 'Timeseries Data Analysis GUI',
-    image: '/images/projects/timeseries-gui.svg',
-    overview: 'A comprehensive desktop application built with Python Tkinter that provides engineers with advanced tools for analyzing timeseries data. The application features statistical analysis, visualization capabilities, data filtering, and export functionality tailored for engineering data analysis workflows.',
-    challenge: 'Engineers needed a user-friendly desktop tool for complex timeseries analysis without requiring programming knowledge. The tool had to handle large datasets, provide statistical insights, and offer flexible visualization options while maintaining good performance.',
-    solution: 'Developed a feature-rich GUI application using Tkinter with integrated pandas for data processing, matplotlib for plotting, and scipy for statistical analysis. The interface provides intuitive controls for data manipulation and analysis with real-time visualization updates.',
-    technologies: ['Python', 'Tkinter', 'Pandas', 'NumPy', 'Matplotlib', 'SciPy', 'Plotly', 'Statistical Analysis'],
-    sections: [
-      {
-        title: 'Data Import & Management',
-        content: 'Implemented flexible data import system supporting multiple file formats (CSV, Excel, JSON) with automatic data type detection and validation. Features include data preview, column mapping, and handling of missing values.',
-      },
-      {
-        title: 'Statistical Analysis Tools',
-        content: 'Built comprehensive statistical analysis capabilities including descriptive statistics, correlation analysis, trend detection, and anomaly identification. Results are presented in both tabular and graphical formats for easy interpretation.',
-      },
-      {
-        title: 'Interactive Visualization',
-        content: 'Created dynamic plotting capabilities with zoom, pan, and selection tools. Supports multiple chart types including line plots, scatter plots, histograms, and box plots with customizable styling and annotation features.',
-      }    ],
-    results: [
-      'Successfully handles datasets with millions of data points',
-      'Reduced analysis time by 70% compared to manual Excel-based workflows',
-      'Improved data insights quality through advanced statistical tools',
-      'Widely adopted by engineering team for daily data analysis tasks'
-    ]
   },
   'wind-turbine-capability-analysis': {
     title: 'Wind Turbine Capability Analysis Dashboard',
