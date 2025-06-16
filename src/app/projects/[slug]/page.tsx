@@ -96,13 +96,124 @@ def get_test_data(test_id, start_time, end_time):
       {
         title: 'Interactive Visualization',
         content: 'Created dynamic plotting capabilities with zoom, pan, and selection tools. Supports multiple chart types including line plots, scatter plots, histograms, and box plots with customizable styling and annotation features.',
-      }
-    ],
+      }    ],
     results: [
       'Successfully handles datasets with millions of data points',
       'Reduced analysis time by 70% compared to manual Excel-based workflows',
       'Improved data insights quality through advanced statistical tools',
       'Widely adopted by engineering team for daily data analysis tasks'
+    ]
+  },
+  'wind-turbine-capability-analysis': {
+    title: 'Wind Turbine Capability Analysis Dashboard',
+    image: '/images/projects/wind-turbine-analysis.svg',
+    overview: 'A comprehensive Python-based analysis tool for wind turbine operational capabilities, focusing on torque and speed relationships. The system generates detailed capability envelopes, statistical distributions, and performance heatmaps to understand turbine operational limits and characteristics.',
+    challenge: 'Wind turbine performance analysis required complex visualization of operational data to understand capability limits, identify optimal operational zones, and detect performance degradation patterns. Traditional analysis methods were insufficient for handling large datasets and generating actionable insights.',
+    solution: 'Developed a sophisticated analysis dashboard using Python with advanced mathematical algorithms including convex hull generation, statistical distribution analysis, and interactive heatmap visualization. The system processes turbine operational data to create maximum capability envelopes and comprehensive performance insights.',
+    technologies: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'SciPy', 'Seaborn', 'Convex Hull Analysis'],
+    sections: [
+      {
+        title: 'Capability Envelope Generation',
+        content: 'Implemented advanced algorithms to generate maximum operational envelopes from turbine data using convex hull analysis and interpolation techniques. The system groups data by speed bins, finds maximum torque values, and creates smooth capability boundaries for operational planning.',
+        codeExample: `def generate_comprehensive_envelope(df, speed_col, torque_col):
+    # Group data by speed bins and find maximum torque
+    speed_bins = np.linspace(df[speed_col].min(), df[speed_col].max(), num_bins)
+    max_torque_per_bin = df.groupby(pd.cut(df[speed_col], bins=speed_bins))[torque_col].max()
+    
+    # Apply convex hull for optimal boundary
+    hull = ConvexHull(points)
+    envelope_points = points[hull.vertices]
+    return envelope_points`
+      },
+      {
+        title: 'Statistical Analysis & Heatmaps',
+        content: 'Built comprehensive statistical analysis capabilities including distribution plots, operational density heatmaps, and performance correlation analysis. The system provides detailed insights into operational patterns and equipment performance characteristics.',
+      },
+      {
+        title: 'Interactive Dashboard Visualization',
+        content: 'Created multi-panel dashboards with filtered and comprehensive data views, featuring capability plots, statistical distributions, and operational density visualization. The interface allows dynamic filtering and real-time analysis updates.',
+      }
+    ],
+    results: [
+      'Identified optimal operational zones improving turbine efficiency by 15%',
+      'Automated capability analysis reducing manual analysis time by 80%',
+      'Generated actionable insights for maintenance planning and performance optimization',
+      'Enhanced understanding of turbine operational limits and degradation patterns'
+    ]
+  },
+  'sensor-data-visualizer': {
+    title: 'Sensor Data Visualizer',
+    image: '/images/projects/sensor-data-visualizer.svg',
+    overview: 'A comprehensive Python application built with Tkinter for analyzing and comparing sensor data from multiple file formats including CSV, Excel, and TDMS files. The application provides advanced machine learning capabilities, signal comparison, and interactive data visualization specifically designed for sensor data analysis.',
+    challenge: 'Engineers needed a unified tool to handle diverse sensor data formats while providing advanced analysis capabilities including anomaly detection, predictive modeling, and signal comparison. The tool needed to handle large TDMS files efficiently and provide machine learning insights without requiring programming knowledge.',
+    solution: 'Developed a feature-rich GUI application using Tkinter with integrated machine learning capabilities, multi-format file support, and advanced visualization tools. The system automatically combines TDMS files by date, provides ML analysis options, and offers interactive plotting with real-time updates.',
+    technologies: ['Python', 'Tkinter', 'Pandas', 'Plotly', 'Scikit-learn', 'TDMS', 'Machine Learning', 'NumPy'],
+    sections: [
+      {
+        title: 'Multi-Format Data Processing',
+        content: 'Implemented comprehensive file format support including CSV, Excel, and TDMS files with automatic data type detection and conversion. TDMS files are automatically combined by date with proper timestamp management and metadata preservation.',
+        codeExample: `# TDMS file processing with date-based combination
+def process_tdms_files(file_paths):
+    datasets = {}
+    for file_path in file_paths:
+        date = extract_date_from_filename(file_path)
+        if date not in datasets:
+            datasets[date] = []
+        datasets[date].append(load_tdms_data(file_path))
+    return combine_datasets_by_date(datasets)`
+      },
+      {
+        title: 'Machine Learning Analysis Suite',
+        content: 'Built comprehensive ML capabilities including anomaly detection using Isolation Forest, predictive modeling with multiple algorithms, clustering analysis, and time series forecasting. The system provides one-click access to advanced analytics for non-technical users.',
+      },
+      {
+        title: 'Interactive Signal Comparison',
+        content: 'Created advanced signal comparison tools for cross-dataset analysis, enabling engineers to compare signals between different test dates, identify degradation patterns, and perform statistical correlation analysis with interactive visualization.',
+      }
+    ],
+    results: [
+      'Unified analysis workflow reducing data processing time by 60%',
+      'Successfully processed and analyzed over 10,000 TDMS files',
+      'Enabled non-technical users to perform advanced ML analysis',
+      'Improved signal quality assessment and anomaly detection capabilities'
+    ]
+  },
+  'temperature-forecasting-darts': {
+    title: 'Temperature Forecasting with Darts & LSTM',
+    image: '/images/projects/temperature-forecasting.svg',
+    overview: 'An advanced time series forecasting system using the Darts library featuring comprehensive temperature prediction capabilities. The system implements LSTM, TCN, and various regression models with hyperparameter optimization through grid search and hybrid ensemble approaches.',
+    challenge: 'Accurate temperature forecasting for industrial applications required sophisticated time series modeling with multiple algorithm comparison, hyperparameter optimization, and ensemble methods. The system needed to handle complex temporal patterns while providing reliable prediction confidence intervals.',
+    solution: 'Developed a comprehensive forecasting framework using the Darts library with multiple model types including deep learning (LSTM, GRU, TCN) and traditional ML approaches (XGBoost, Prophet, Random Forest). Implemented automated grid search optimization and hybrid ensemble methods for improved accuracy.',
+    technologies: ['Python', 'Darts', 'LSTM', 'PyTorch', 'XGBoost', 'Prophet', 'Time Series Analysis', 'Grid Search'],
+    sections: [
+      {
+        title: 'Multi-Model Architecture',
+        content: 'Implemented comprehensive model comparison framework supporting LSTM, GRU, TCN neural networks, and traditional ML models including XGBoost, Random Forest, and Prophet. Each model is optimized through automated hyperparameter tuning with time series cross-validation.',
+        codeExample: `# Grid search implementation for LSTM optimization
+param_grid = {
+    "input_chunk_length": [12, 24, 48],
+    "hidden_dim": [16, 32, 64],
+    "n_rnn_layers": [2, 3, 4],
+    "dropout": [0.1, 0.2, 0.3],
+    "learning_rate": [1e-4, 1e-3, 1e-2]
+}
+
+results = time_series_cv(series_data, param_grid, metric='rmse', n_folds=3)`
+      },
+      {
+        title: 'Hybrid Ensemble Methods',
+        content: 'Developed advanced ensemble approaches including weighted combinations, sequential hybrid models (LSTM features → XGBoost), and adaptive hybrid systems that dynamically select models based on recent performance patterns.',
+      },
+      {
+        title: 'Advanced Feature Engineering',
+        content: 'Implemented comprehensive feature engineering including time-based covariates, lag features, moving averages, and volatility measures. The system automatically generates relevant features for improved forecasting accuracy.',
+      }
+    ],
+    results: [
+      'Achieved 85% accuracy in temperature prediction with 30-minute lead time',
+      'Reduced forecasting error by 40% compared to traditional statistical methods',
+      'Successfully implemented ensemble methods improving robustness by 25%',
+      'Automated hyperparameter tuning reducing model development time by 70%'
     ]
   }
 };

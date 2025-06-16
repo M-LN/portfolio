@@ -1,0 +1,103 @@
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="forecastBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="400" height="300" fill="url(#forecastBg)"/>
+  
+  <!-- Jupyter Notebook Interface -->
+  <g transform="translate(30, 30)">
+    <!-- Notebook Window -->
+    <rect x="0" y="0" width="340" height="200" fill="#ffffff" rx="8" stroke="#e5e7eb" stroke-width="2"/>
+    
+    <!-- Notebook Header -->
+    <rect x="0" y="0" width="340" height="30" fill="#f8fafc" rx="8"/>
+    <rect x="0" y="15" width="340" height="15" fill="#f8fafc"/>
+    
+    <!-- Jupyter Logo Area -->
+    <circle cx="15" cy="15" r="8" fill="#f37626"/>
+    <text x="30" y="20" fill="#374151" font-size="12" font-weight="bold">Temperature Forecasting - Darts & LSTM</text>
+    
+    <!-- Cell 1: Code Cell -->
+    <rect x="10" y="40" width="320" height="45" fill="#f8fafc" stroke="#e5e7eb" stroke-width="1"/>
+    <rect x="15" y="45" width="5" height="35" fill="#3b82f6"/>
+    <text x="25" y="55" fill="#374151" font-size="9" font-family="monospace"># Temperature Forecasting with LSTM</text>
+    <text x="25" y="67" fill="#374151" font-size="9" font-family="monospace">import darts</text>
+    <text x="25" y="79" fill="#374151" font-size="9" font-family="monospace">from darts.models import RNNModel</text>
+    
+    <!-- Cell 2: Output Cell with Chart -->
+    <rect x="10" y="90" width="320" height="100" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
+    
+    <!-- Temperature Forecast Chart -->
+    <g transform="translate(20, 100)">
+      <!-- Chart Background -->
+      <rect x="0" y="0" width="300" height="80" fill="#fefefe"/>
+      
+      <!-- Grid -->
+      <g stroke="#f1f5f9" stroke-width="0.5">
+        <line x1="0" y1="20" x2="300" y2="20"/>
+        <line x1="0" y1="40" x2="300" y2="40"/>
+        <line x1="0" y1="60" x2="300" y2="60"/>
+        <line x1="50" y1="0" x2="50" y2="80"/>
+        <line x1="100" y1="0" x2="100" y2="80"/>
+        <line x1="150" y1="0" x2="150" y2="80"/>
+        <line x1="200" y1="0" x2="200" y2="80"/>
+        <line x1="250" y1="0" x2="250" y2="80"/>
+      </g>
+      
+      <!-- Historical Data (blue line) -->
+      <polyline points="10,60 20,55 30,50 40,45 50,40 60,42 70,44 80,46 90,48 100,50 110,52 120,54 130,56 140,58 150,60" 
+                fill="none" stroke="#3b82f6" stroke-width="2"/>
+      
+      <!-- Forecast Data (orange line) -->
+      <polyline points="150,60 160,58 170,56 180,54 190,52 200,50 210,48 220,46 230,44 240,42 250,40 260,38 270,36 280,34 290,32" 
+                fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="5,5"/>
+      
+      <!-- Confidence Interval -->
+      <path d="M150,60 L160,56 L170,54 L180,52 L190,50 L200,48 L210,46 L220,44 L230,42 L240,40 L250,38 L260,36 L270,34 L280,32 L290,30 L290,34 L280,36 L270,38 L260,40 L250,42 L240,44 L230,46 L220,48 L210,50 L200,52 L190,54 L180,56 L170,58 L160,62 Z" 
+            fill="#f59e0b" opacity="0.2"/>
+      
+      <!-- Vertical line separating historical and forecast -->
+      <line x1="150" y1="0" x2="150" y2="80" stroke="#ef4444" stroke-width="2" stroke-dasharray="3,3"/>
+      
+      <!-- Labels -->
+      <text x="75" y="75" text-anchor="middle" fill="#3b82f6" font-size="8">Historical</text>
+      <text x="220" y="75" text-anchor="middle" fill="#f59e0b" font-size="8">Forecast</text>
+      <text x="150" y="75" text-anchor="middle" fill="#ef4444" font-size="7">Now</text>
+    </g>
+  </g>
+  
+  <!-- Model Architecture Diagram -->
+  <g transform="translate(50, 240)">
+    <!-- LSTM Layers -->
+    <rect x="0" y="0" width="60" height="20" fill="#ffffff" rx="4" opacity="0.9"/>
+    <text x="30" y="12" text-anchor="middle" fill="#f59e0b" font-size="9" font-weight="bold">LSTM</text>
+    
+    <rect x="70" y="0" width="60" height="20" fill="#ffffff" rx="4" opacity="0.9"/>
+    <text x="100" y="12" text-anchor="middle" fill="#f59e0b" font-size="9" font-weight="bold">TCN</text>
+    
+    <rect x="140" y="0" width="60" height="20" fill="#ffffff" rx="4" opacity="0.9"/>
+    <text x="170" y="12" text-anchor="middle" fill="#f59e0b" font-size="9" font-weight="bold">XGBoost</text>
+    
+    <rect x="210" y="0" width="60" height="20" fill="#ffffff" rx="4" opacity="0.9"/>
+    <text x="240" y="12" text-anchor="middle" fill="#f59e0b" font-size="9" font-weight="bold">Prophet</text>
+    
+    <rect x="280" y="0" width="70" height="20" fill="#ffffff" rx="4" opacity="0.9"/>
+    <text x="315" y="12" text-anchor="middle" fill="#f59e0b" font-size="8" font-weight="bold">Grid Search</text>
+  </g>
+  
+  <!-- Darts Library Icon -->
+  <g transform="translate(20, 240)">
+    <circle cx="10" cy="10" r="8" fill="#ffffff" opacity="0.9"/>
+    <text x="10" y="14" text-anchor="middle" fill="#f59e0b" font-size="8" font-weight="bold">🎯</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="200" y="285" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="bold">
+    Temperature Forecasting with Darts
+  </text>
+</svg>

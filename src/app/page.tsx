@@ -23,12 +23,12 @@ const featuredProjects = [
     featured: true,
   },
   {
-    id: '3',
-    title: 'Timeseries Data Analysis GUI',
-    description: 'Comprehensive desktop application built with Tkinter providing advanced tools for timeseries data analysis. Features statistical analysis, visualization tools, data filtering, and export capabilities for engineering data analysis.',
-    technologies: ['Python', 'Tkinter', 'Pandas', 'NumPy', 'Matplotlib', 'SciPy', 'Plotly'],
-    image: '/images/projects/timeseries-gui.svg',
-    slug: 'timeseries-analysis-gui',
+    id: '4',
+    title: 'Wind Turbine Capability Analysis Dashboard',
+    description: 'Python-based analysis tool for wind turbine operational capabilities, focusing on torque and speed relationships. Generates capability envelopes, statistical distributions, and performance heatmaps for operational limits understanding.',
+    technologies: ['Python', 'Pandas', 'Matplotlib', 'SciPy', 'Seaborn', 'NumPy'],
+    image: '/images/projects/wind-turbine-analysis.svg',
+    slug: 'wind-turbine-capability-analysis',
     featured: true,
   },
 ];
@@ -36,19 +36,19 @@ const featuredProjects = [
 const techStackData = [
   {
     category: 'Data Science & ML',
-    items: ['Python', 'TensorFlow/Keras', 'LSTM', 'NumPy', 'Pandas', 'Scikit-learn']
+    items: ['Python', 'TensorFlow/Keras', 'LSTM', 'NumPy', 'Pandas', 'Scikit-learn', 'XGBoost', 'PyTorch']
   },
   {
-    category: 'Web Development',
-    items: ['Flask', 'HTML/CSS', 'JavaScript', 'Jinja2', 'Next.js', 'React']
+    category: 'Time Series & Forecasting',
+    items: ['Darts', 'Prophet', 'ARIMA', 'Grid Search', 'Ensemble Methods', 'Feature Engineering']
   },
   {
     category: 'Data Visualization',
-    items: ['Matplotlib', 'Plotly', 'SciPy', 'D3.js', 'Interactive Charts']
+    items: ['Matplotlib', 'Plotly', 'SciPy', 'Seaborn', 'Interactive Charts', 'Statistical Analysis']
   },
   {
-    category: 'Cloud & Tools',
-    items: ['Azure Data Explorer', 'Git', 'Tkinter', 'Desktop Apps', 'RESTful APIs']
+    category: 'Development & Tools',
+    items: ['Flask', 'Tkinter', 'Azure Data Explorer', 'TDMS', 'Git', 'Desktop Applications']
   }
 ];
 

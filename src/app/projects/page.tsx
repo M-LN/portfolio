@@ -35,6 +35,33 @@ const allProjects = [
     slug: 'timeseries-analysis-gui',
     featured: true,
   },
+  {
+    id: '4',
+    title: 'Wind Turbine Capability Analysis Dashboard',
+    description: 'Python-based analysis tool for wind turbine operational capabilities, focusing on torque and speed relationships. Generates capability envelopes, statistical distributions, and performance heatmaps for operational limits understanding.',
+    technologies: ['Python', 'Pandas', 'Matplotlib', 'SciPy', 'Seaborn', 'NumPy'],
+    image: '/images/projects/wind-turbine-analysis.svg',
+    slug: 'wind-turbine-capability-analysis',
+    featured: true,
+  },
+  {
+    id: '5',
+    title: 'Sensor Data Visualizer',
+    description: 'Comprehensive Tkinter application for analyzing sensor data from CSV, Excel, and TDMS files. Features machine learning capabilities, signal comparison, interactive visualization, and advanced data processing for multi-format sensor analysis.',
+    technologies: ['Python', 'Tkinter', 'Pandas', 'Plotly', 'Scikit-learn', 'TDMS', 'Machine Learning'],
+    image: '/images/projects/sensor-data-visualizer.svg',
+    slug: 'sensor-data-visualizer',
+    featured: true,
+  },
+  {
+    id: '6',
+    title: 'Temperature Forecasting with Darts & LSTM',
+    description: 'Advanced time series forecasting system using the Darts library. Features LSTM, TCN, and various regression models with hyperparameter optimization through grid search and hybrid ensemble approaches for temperature prediction.',
+    technologies: ['Python', 'Darts', 'LSTM', 'PyTorch', 'XGBoost', 'Prophet', 'Time Series Analysis'],
+    image: '/images/projects/temperature-forecasting.svg',
+    slug: 'temperature-forecasting-darts',
+    featured: true,
+  },
 ];
 
 export default function Projects() {
