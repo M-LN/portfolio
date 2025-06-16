@@ -51,9 +51,7 @@ def get_test_data(test_id, start_time, end_time):
     solution: 'Developed a sophisticated analysis dashboard using Python with advanced mathematical algorithms including convex hull generation, statistical distribution analysis, and interactive heatmap visualization. The system processes turbine operational data to create maximum capability envelopes and comprehensive performance insights.',
     technologies: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'SciPy', 'Seaborn', 'Convex Hull Analysis'],    sections: [      {
         title: 'Capability Envelope Generation',
-        content: 'Implemented advanced algorithms to generate maximum operational envelopes from turbine data using convex hull analysis and interpolation techniques. The comprehensive dashboard shows complete torque vs speed analysis with capability envelopes, statistical distributions, and density heatmaps for both all data and filtered sustained operations (≥20 min). The system groups data by speed bins, finds maximum torque values, and creates smooth capability boundaries for operational planning.',
-        image: '/images/projects/capability-analysis-all-data.png',
-        codeExample: `def generate_comprehensive_envelope(df, speed_col, torque_col):
+        content: 'Implemented advanced algorithms to generate maximum operational envelopes from turbine data using convex hull analysis and interpolation techniques. The comprehensive dashboard shows complete torque vs speed analysis with capability envelopes, statistical distributions, and density heatmaps for both all data and filtered sustained operations (≥20 min). The system groups data by speed bins, finds maximum torque values, and creates smooth capability boundaries for operational planning.',        codeExample: `def generate_comprehensive_envelope(df, speed_col, torque_col):
     # Group data by speed bins and find maximum torque
     speed_bins = np.linspace(df[speed_col].min(), df[speed_col].max(), num_bins)
     max_torque_per_bin = df.groupby(pd.cut(df[speed_col], bins=speed_bins))[torque_col].max()
@@ -66,7 +64,6 @@ def get_test_data(test_id, start_time, end_time):
       {
         title: 'Sustained Operation Analysis & Filtering',
         content: 'Developed sophisticated filtering capabilities to analyze sustained operations (≥20 minutes) separately from transient events. The filtered analysis reveals true operational capabilities by focusing on stable, sustained performance patterns. This approach provides more accurate capability assessments for maintenance planning and performance optimization by eliminating short-term spikes and transients.',
-        image: '/images/projects/capability-analysis-filtered-data.png',
       },
       {
         title: 'Interactive Dashboard Visualization',
