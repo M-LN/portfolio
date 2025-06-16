@@ -41,22 +41,14 @@ export default function CaseStudy({
         </h1>        {/* Project Image */}
         {image && (
           <div className="relative h-64 w-full mb-8 rounded-lg overflow-hidden">
-            {image.includes('temperature-forecasting') ? (
-              <img
-                src={image}
-                alt={title}
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <Image
-                src={image}
-                alt={title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
-                unoptimized={image.endsWith('.svg')}
-              />
-            )}
+            <Image
+              src={image}
+              alt={title}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw"
+              unoptimized={image.endsWith('.svg')}
+            />
           </div>
         )}
         

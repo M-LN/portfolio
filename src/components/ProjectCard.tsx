@@ -19,23 +19,15 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">      {project.image ? (
         <div className="relative h-48 w-full">
-          {project.image.includes('temperature-forecasting') ? (
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-full object-cover"
-            />
-          ) : (
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              priority={project.featured}
-              unoptimized={project.image.endsWith('.svg')}
-            />
-          )}
+          <Image
+            src={project.image}
+            alt={project.title}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={project.featured}
+            unoptimized={project.image.endsWith('.svg')}
+          />
         </div>
       ) : (
         <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
