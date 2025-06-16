@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import ExpandableImage from './ExpandableImage';
 
 interface CaseStudySection {
   title: string;
@@ -131,18 +132,29 @@ export default function CaseStudy({
         <section key={index} className="mb-12">
           <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
             {section.title}
-          </h2>
-            {section.image && (
-            <div className="relative h-64 md:h-96 mb-6 rounded-lg overflow-hidden">
-              <Image
-                src={section.image}
-                alt={section.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
-                unoptimized={section.image.endsWith('.svg')}
-              />
-            </div>
+          </h2>          {section.image && (
+            <>
+              {section.image.includes('capability-analysis') ? (
+                <ExpandableImage
+                  src={section.image}
+                  alt={section.title}
+                  title={section.title}
+                />
+              ) : (
+                <div className="mb-6 rounded-lg overflow-hidden bg-white dark:bg-gray-800 p-4">
+                  <div className="relative h-64 md:h-96">
+                    <Image
+                      src={section.image}
+                      alt={section.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 70vw"
+                      unoptimized={section.image.endsWith('.svg')}
+                    />
+                  </div>
+                </div>
+              )}
+            </>
           )}
           
           <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
