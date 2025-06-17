@@ -35,20 +35,20 @@ const featuredProjects = [
 
 const techStackData = [
   {
-    category: 'Data Science & ML',
-    items: ['Python', 'TensorFlow/Keras', 'LSTM', 'NumPy', 'Pandas', 'Scikit-learn', 'XGBoost', 'PyTorch']
+    category: 'Programming & Analysis',
+    items: ['Python', 'Data Analysis', 'NumPy', 'Pandas', 'Matplotlib', 'Machine Learning Basics']
   },
   {
-    category: 'Time Series & Forecasting',
-    items: ['Darts', 'Prophet', 'ARIMA', 'Grid Search', 'Ensemble Methods', 'Feature Engineering']
+    category: 'Web Development',
+    items: ['Flask', 'HTML/CSS', 'JavaScript', 'React', 'Next.js', 'Responsive Design']
   },
   {
     category: 'Data Visualization',
-    items: ['Matplotlib', 'Plotly', 'SciPy', 'Seaborn', 'Interactive Charts', 'Statistical Analysis']
+    items: ['Plotly', 'Seaborn', 'Interactive Charts', 'Statistical Plots', 'Dashboard Creation']
   },
   {
-    category: 'Development & Tools',
-    items: ['Flask', 'Tkinter', 'Azure Data Explorer', 'TDMS', 'Git', 'Desktop Applications']
+    category: 'Tools & Platforms',
+    items: ['Git', 'Azure Data Explorer', 'Desktop Applications', 'Tkinter', 'TDMS Files', 'Excel/CSV Processing']
   }
 ];
 
@@ -64,8 +64,8 @@ export default function Home() {
               <span className="text-blue-600 dark:text-blue-400">Morten Lundum-Nørgaard</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              Data Scientist and Software Developer specializing in machine learning, 
-              test automation, and data analysis solutions for industrial applications.
+              Software developer who loves building practical tools for data analysis, 
+              automation, and problem-solving in real-world applications.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
@@ -96,8 +96,8 @@ export default function Home() {
               Featured Projects
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Explore my portfolio of data science and engineering projects, from machine learning models 
-              to automated reporting systems and comprehensive data analysis tools.
+              Here are some projects I&apos;ve built - from web applications to data analysis tools, 
+              each one solving real problems I&apos;ve encountered.
             </p>
           </div>
           
@@ -129,7 +129,7 @@ export default function Home() {
               Technologies I Work With
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              I&apos;m proficient in a wide range of modern technologies and tools.
+              Here are the technologies and tools I enjoy working with.
             </p>
           </div>
           

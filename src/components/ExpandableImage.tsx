@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Image from 'next/image';
 
 interface ExpandableImageProps {
   src: string;
@@ -13,8 +12,8 @@ export default function ExpandableImage({ src, alt, title }: ExpandableImageProp
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <>
-      <div className="mb-6 rounded-lg overflow-hidden bg-white dark:bg-gray-800 p-4">
+    <>      <div className="mb-6 rounded-lg overflow-hidden bg-white dark:bg-gray-800 p-4">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={src}
           alt={alt}
@@ -41,8 +40,8 @@ export default function ExpandableImage({ src, alt, title }: ExpandableImageProp
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
+              </svg>            </button>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={src}
               alt={alt}

@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Morten Lundum-Nørgaard - Data Scientist & Software Developer",
-  description: "Professional portfolio showcasing machine learning projects, data analysis solutions, and software development expertise in industrial applications.",
-  keywords: ["data science", "machine learning", "LSTM", "Flask", "Python", "Azure Data Explorer", "portfolio", "data analysis", "industrial testing"],
+  title: "Morten Lundum-Nørgaard - Software Developer",
+  description: "Software developer who builds practical tools for data analysis, automation, and web applications. Portfolio showcasing real projects and solutions.",
+  keywords: ["software developer", "python", "flask", "data analysis", "web development", "automation", "portfolio", "programming"],
   authors: [{ name: "Morten Lundum-Nørgaard" }],
   creator: "Morten Lundum-Nørgaard",
 };
