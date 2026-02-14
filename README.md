@@ -1,5 +1,10 @@
 # Portfolio Website
 
+> **Note**: Remember to set the GitHub repository description to:
+> "Modern, responsive portfolio website showcasing projects and skills - built with Next.js 15, TypeScript, and Tailwind CSS"
+> 
+> And add topics: `nextjs`, `portfolio`, `typescript`, `tailwind-css`, `react`, `responsive-design`, `seo`
+
 A modern, professional portfolio website built with Next.js 15, TypeScript, and Tailwind CSS. This portfolio showcases projects, skills, and professional experience with a focus on performance, accessibility, and responsive design.
 
 ## 🚀 Features
@@ -62,7 +67,7 @@ portfolio/
 
 1. Clone the repository:
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/M-LN/portfolio.git
 cd portfolio
 ```
 
@@ -143,9 +148,7 @@ The app can be deployed to any platform that supports Next.js:
 ## 📧 Contact
 
 For questions or support, please reach out through the contact form on the website or via:
-- Email: your.email@example.com
-- LinkedIn: [Your LinkedIn Profile]
-- GitHub: [Your GitHub Profile]
+- GitHub: [@M-LN](https://github.com/M-LN)
 
 ## 📄 License
 
